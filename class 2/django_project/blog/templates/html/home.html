@@ -1,0 +1,17 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+	<h1> Blog homepage</h1>
+	
+	{% for post in posts %}
+		<h2>Blog text: {{ post.text }}</h2>
+		<h3>Written by {{post.author}}</h3>
+		{% if post.author == "Rafi" %}
+			<p>I know this author</p>
+		{% else %}
+			<p>I don't know this author</p>
+		{% endif %}
+		<hr>
+	{% endfor %}
+	
+{% endblock content %}
