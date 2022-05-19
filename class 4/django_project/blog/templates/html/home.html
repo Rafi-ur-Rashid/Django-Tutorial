@@ -1,0 +1,15 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+	<h1> Blog homepage</h1>
+	
+	{% for post in posts %}
+		<h1>Blog title: {{ post.title }}</h1>
+		<h2>Blog text: {{ post.text }}</h2>
+		<h2>Blog posted on: {{ post.date_posted }}</h2>
+		<h3>Written by {{post.author}}</h3>
+		
+		<hr>
+	{% endfor %}
+	
+{% endblock content %}
