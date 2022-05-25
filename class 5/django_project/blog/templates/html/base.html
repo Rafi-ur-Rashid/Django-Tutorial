@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+	
+	<div class="ui secondary  menu">
+	  <a class="active item" href="{% url 'blog-home'%}">
+	    Home
+	  </a>
+	  <a class="item" href="{% url 'blog-about'%}">
+	    About
+	  </a>
+	  <a class="item" href="{% url 'blog-post'%}">
+	    Create Post
+	  </a>
+
+	</div>
+	<h2> Welcome to our blog website</h2>
+	{% block content %}
+
+	{% endblock content %}
+	<h2>Contact me: rafiurrashid@cse.uiu.ac.bd</h2>
+	
+	<button><a href="{% url 'blog-logout' %}">Log out</a></button>
+	
+</body>
+</html>

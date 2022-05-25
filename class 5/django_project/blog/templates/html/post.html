@@ -1,0 +1,22 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+
+	<form class="ui form" method='POST' action="{% url 'blog-post' %}">
+		{% csrf_token %}
+	  <div class="field">
+	    <label>Post Title</label>
+	    <input type="text" name="title" placeholder="Insert Title">
+	  </div>
+	  <div class="field">
+	    <label>Post Text</label>
+	    <textarea name="text" cols="50" rows="5" placeholder="Write Something"></textarea>
+	  </div>
+	 <div class="field">
+	    <label>Post Author</label>
+	    <input type="text" name="author" placeholder="Author name">
+	  </div>
+	  <button class="ui button" type="submit">Post</button>
+	</form>
+
+{% endblock content %}
